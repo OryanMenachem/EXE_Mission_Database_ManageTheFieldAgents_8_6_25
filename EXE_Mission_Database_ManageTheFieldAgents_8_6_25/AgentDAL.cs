@@ -33,6 +33,7 @@ namespace EXE_Mission_Database_ManageTheFieldAgents_8_6_25
             {
                 _conn.Close();
                 _conn = null;
+                Console.WriteLine("Unconnection");
             }
         }
         public AgentDAL()
@@ -83,7 +84,7 @@ namespace EXE_Mission_Database_ManageTheFieldAgents_8_6_25
 
         public List<Agent> GetAllAgents()
         {
-            var agentList = new List<Agent>();
+            List<Agent> agentList = new List<Agent>();
 
             try
             {
